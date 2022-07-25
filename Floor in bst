@@ -1,0 +1,23 @@
+
+int floor(TreeNode* root,int key){
+
+int flor=-1;
+while(root){
+if(key==root->val){
+flor=root->val;
+return flor;
+}
+
+if(root->val > key){
+root=root->right;
+
+}
+else
+{
+flor=root->val;
+root=root->right;
+
+}
+
+return floor;
+}
