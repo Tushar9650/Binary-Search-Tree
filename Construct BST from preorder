@@ -1,3 +1,4 @@
+// method 3 hai yeh 1 hai inorder or preorder vala and 2 vala preorder means root left right root bna k bar bar check krlo kaha pr node lga gee
 TreeNode* Construct(vector<int> p,int& i,int bound){
         
         if(i==p.size() || p[i] > bound)
