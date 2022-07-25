@@ -1,0 +1,18 @@
+TreeNode* Construct(vector<int> p,int& i,int bound){
+        
+        if(i==p.size() || p[i] > bound)
+            return NULL;
+        
+        TreeNode* Node=new TreeNode(p[i++]);
+        Node->left=Construct(p,i,Node->val);
+        Node->right=Construct(p,i,bound);
+        
+        return Node;
+    }
+    
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        int i=0;
+        
+        return Construct(preorder,i,INT_MAX);
+        
+    }
